@@ -1,182 +1,119 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Atelier de Cycy — Portfolio</title>
-  <meta name="description" content="Portfolio d'illustrations et créations numériques par Cycy." />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Si tu as déjà un style.css, garde-le.
+       Sinon ce petit style suffit pour une grille propre -->
+  <style>
+    body{margin:0;background:#0e0e1a;color:#fff;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif}
+    header{padding:24px 16px;text-align:center}
+    header h1{margin:0 0 6px}
+    header p{margin:0;color:#bfc2d9}
+    .filters{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;padding:0 16px 10px}
+    .filters button{background:#16182a;color:#fff;border:1px solid rgba(255,255,255,.1);padding:8px 14px;border-radius:999px;cursor:pointer;font-weight:700}
+    .filters button.active{background:#ffd166;color:#111;border-color:#ffd166}
+    .gallery{padding:18px 16px 40px;display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+    .portfolio-item{background:#151526;border:1px solid rgba(255,255,255,.08);border-radius:14px;overflow:hidden;box-shadow:0 10px 24px rgba(0,0,0,.25)}
+    .portfolio-item img{display:block;width:100%;height:240px;object-fit:cover}
+    .portfolio-item p{margin:0;padding:10px 12px}
+    footer{color:#bfc2d9;text-align:center;padding:20px 16px;border-top:1px solid rgba(255,255,255,.08)}
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-grid">
-      <div class="brand">
-        <h1>Atelier de Cycy</h1>
-        <p class="tag">Illustrations & créations numériques</p>
-      </div>
-      <nav class="nav">
-        <a href="#galerie">Galeries</a>
-        <a href="#apropos">À propos</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
 
-  <section class="hero">
-    <div class="container">
-      <h2>Découvre mes univers</h2>
-      <p>Organisé par dossiers création.</p>
-      <div class="filters" id="filters" aria-label="Filtres des galeries">
-        <button class="filter-btn active" data-filter="*">Tout</button>
-        <button class="filter-btn" data-filter="tahran">Tahran</button>
-        <button class="filter-btn" data-filter="antonio">Antonio</button>
-        <button class="filter-btn" data-filter="jinhwan">JinHwan</button>
-        <button class="filter-btn" data-filter="rp">RP</button>
-        <button class="filter-btn" data-filter="creations">Créations</button>
-      </div>
-    </div>
-  </section>
+<header>
+  <h1>Atelier de Cycy</h1>
+  <p>Illustrations & créations numériques</p>
+</header>
 
+<!-- Filtres -->
+<nav class="filters" aria-label="Filtres des galeries">
+  <button class="active" data-filter="all">Tous</button>
+  <button data-filter="filter-tahran">Tahran</button>
+  <button data-filter="filter-antonio">Antonio</button>
+  <button data-filter="filter-jinhwan">JinHwan</button>
+  <button data-filter="filter-rp">RP</button>
+  <button data-filter="filter-creations">Créations</button>
+</nav>
 
-<!-- Galerie Tahran -->
-<article class="card" data-cat="tahran">
-    <img src="assets/img/tahran.png" alt="Tahran">
-    <p>Tahran</p>
-</article>
+<!-- Galerie -->
+<section class="gallery" id="gallery">
 
-<article class="card" data-cat="tahran">
-    <img src="assets/img/tahran2.png" alt="Tahran 2">
-    <p>Tahran 2</p>
-</article>
+  <!-- ====== Tahran : apparaît dans Tous + Tahran seulement ====== -->
+  <div class="portfolio-item filter-tahran">
+    <img src="tahran.png" alt="Tahran 1">
+    <p>Tahran 1</p>
+  </div>
 
-<article class="card" data-cat="tahran">
-    <img src="assets/img/tahran3.png" alt="Tahran 3">
-    <p>Tahran 3</p>
-</article>
-
-<article class="card" data-cat="tahran">
-    <img src="assets/img/tahran4.png" alt="Tahran 4">
-    <p>Tahran 4</p>
-</article>
-
-<article class="card" data-cat="tahran">
-    <img src="assets/img/tahran5.png" alt="Tahran 5">
-    <p>Tahran 5</p>
-</article>
-
-<article class="card" data-cat="tahran">
-    <img src="assets/img/tahran6.png" alt="Tahran 6">
-    <p>Tahran 6</p>
-</article>
-
-<article class="card" data-cat="tahran">
-    <img src="assets/img/tahran7.png" alt="Tahran 7">
-    <p>Tahran 7</p>
-</article>
-
-<article class="card" data-cat="tahran">
-    <img src="assets/img/tahran8.png" alt="Tahran 8">
-    <p>Tahran 8</p>
-</article>
-
-<article class="card" data-cat="tahran">
-    <img src="assets/img/tahran9.png" alt="Tahran 9">
-    <p>Tahran 9</p>
-</article>
-
-<article class="card" data-cat="tahran">
-    <img src="assets/img/tahran10.png" alt="Tahran 10">
+  <div class="portfolio-item filter-tahran">
+    <img src="tahran10.png" alt="Tahran 10">
     <p>Tahran 10</p>
-</article>
+  </div>
 
-<article class="card" data-cat="tahran">
-    <img src="assets/img/tahran11.jpg" alt="Tahran 11">
+  <div class="portfolio-item filter-tahran">
+    <img src="tahran11.jpg" alt="Tahran 11">
     <p>Tahran 11</p>
-</article>
+  </div>
 
-<article class="card" data-cat="tahran">
-    <img src="assets/img/tahran12.jpg" alt="Tahran 12">
+  <div class="portfolio-item filter-tahran">
+    <img src="tahran12.jpg" alt="Tahran 12">
     <p>Tahran 12</p>
-</article>
+  </div>
 
-<article class="card" data-cat="tahran">
-    <img src="assets/img/tahran13.jpg" alt="Tahran 13">
+  <div class="portfolio-item filter-tahran">
+    <img src="tahran13.jpg" alt="Tahran 13">
     <p>Tahran 13</p>
-</article>
+  </div>
 
-<article class="card" data-cat="tahran">
-    <img src="assets/img/tahran14.jpg" alt="Tahran 14">
+  <div class="portfolio-item filter-tahran">
+    <img src="tahran14.jpg" alt="Tahran 14">
     <p>Tahran 14</p>
-</article>
+  </div>
 
-<article class="card" data-cat="tahran">
-    <img src="assets/img/tahran15.png" alt="Tahran 15">
+  <div class="portfolio-item filter-tahran">
+    <img src="tahran15.png" alt="Tahran 15">
     <p>Tahran 15</p>
-</article>
+  </div>
 
-<article class="card" data-cat="tahran">
-    <img src="assets/img/tahran16.png" alt="Tahran 16">
+  <div class="portfolio-item filter-tahran">
+    <img src="tahran16.png" alt="Tahran 16">
     <p>Tahran 16</p>
-</article>
+  </div>
 
-<article class="card" data-cat="tahran">
-    <img src="assets/img/tahran17.png" alt="Tahran 17">
-    <p>Tahran 17</p>
-</article>
+  <!-- Tu peux continuer ici avec tahran2.png ... tahran25.png
+       (pense bien aux vraies extensions .png / .jpg) -->
+</section>
 
-<article class="card" data-cat="tahran">
-    <img src="assets/img/tahran18.png" alt="Tahran 18">
-    <p>Tahran 18</p>
-</article>
+<footer>
+  © 2025 Atelier de Cycy — GitHub Pages
+</footer>
 
-<article class="card" data-cat="tahran">
-    <img src="assets/img/tahran19.png" alt="Tahran 19">
-    <p>Tahran 19</p>
-</article>
+<!-- JS de filtrage ultra simple -->
+<script>
+  const buttons = document.querySelectorAll('.filters button');
+  const items = document.querySelectorAll('.portfolio-item');
 
-<article class="card" data-cat="tahran">
-    <img src="assets/img/tahran20.png" alt="Tahran 20">
-    <p>Tahran 20</p>
-</article>
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
 
-<article class="card" data-cat="tahran">
-    <img src="assets/img/tahran21.png" alt="Tahran 21">
-    <p>Tahran 21</p>
-</article>
+      const filter = btn.dataset.filter; // "all" ou "filter-tahran" etc.
+      items.forEach(it => {
+        if (filter === 'all' || it.classList.contains(filter)) {
+          it.style.display = '';
+        } else {
+          it.style.display = 'none';
+        }
+      });
+      // scroll léger vers la galerie (optionnel)
+      // window.scrollTo({top: document.getElementById('gallery').offsetTop - 80, behavior: 'smooth'});
+    });
+  });
+</script>
 
-<article class="card" data-cat="tahran">
-    <img src="assets/img/tahran22.png" alt="Tahran 22">
-    <p>Tahran 22</p>
-</article>
-
-<article class="card" data-cat="tahran">
-    <img src="assets/img/tahran23.png" alt="Tahran 23">
-    <p>Tahran 23</p>
-</article>
-
-<article class="card" data-cat="tahran">
-    <img src="assets/img/tahran24.png" alt="Tahran 24">
-    <p>Tahran 24</p>
-</article>
-
-<article class="card" data-cat="tahran">
-    <img src="assets/img/tahran25.png" alt="Tahran 25">
-    <p>Tahran 25</p>
-</article>
-
-
-</div>
-
-
-	  
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 Atelier de Cycy — Hébergeable gratuitement sur GitHub Pages.</p>
-    </div>
-  </footer>
-
-  <script src="assets/js/main.js"></script>
 </body>
 </html>
